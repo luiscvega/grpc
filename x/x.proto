@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Resizer {
+	rpc ResizeImage(Image) returns (Error) {}
+}
+
+message Error {
+	string text = 1;
+}
+
+message Image {
+	bytes bytes = 1;
+}
